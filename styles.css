@@ -9,6 +9,18 @@
     margin: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 0.15rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-clip: #f0f;
+}
+
 body {
     background: var(--background-primary);
     color: #fff;
@@ -17,16 +29,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    gap: 3rem;
+    overflow: hidden;
 }
 
 h1 {
-    align-self: flex-start;
-    justify-self: flex-start;
-    position: fixed;
-}
-
-header {
-    position: fixed;
+    user-select: none;
 }
 
 .container {
@@ -40,6 +48,7 @@ header {
     justify-content: center;
     flex-direction: column;
     gap: 1em;
+    user-select: none;
 }
 
 .buttonContainer {
@@ -60,7 +69,12 @@ header {
     transition: .3s all;
     margin: 0 8px;
     color: #fff;
-    font-size: .7rem;
+    font-size: .6rem;
     font-weight: 500;
     background: rgb(65, 122, 126);
+    cursor: pointer;
+}
+
+.buttonContainer button:hover {
+    background: rgba(65, 122, 126, .7);
 }
